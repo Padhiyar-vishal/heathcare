@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'buymd.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/0399e572c8.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+            <div class="navigation1"></div>
+            <div class="navigation2">
+            <div class="nvbx1">
+                <a href="home" class="nv" >Home</a>
+                <a href="" class="nv">Offers</a>
+                <a href="" class="nv">Contact us</a>
+            </div>
+            <div class="nvbx2">
+                    {% if user.is_authenticated %}<a class="nv3"> Hello, {{user.first_name}}</a>&nbsp;<a class="nv2" href="/logout">Logout</a>{% else %}
+                    <a class="nv2" onclick="login()">
+                     Login</a> {% endif %}
+                    <input type="search" class="nvsrc" placeholder="Search">
+                </div>
+            </div>
+    {% for i in medicine %}
+    <div class="mddetails">
+        <div class="mdphoto"><img src="/media/{{i.mPhoto}}" alt="" class="mdphoto1"></div>
+        <div class="mddetails1">
+            <div class="mdname">
+                {{i.mName}}</div>
+            <div class="mdsell">{{i.mSell}}</div>
+            <div class="mdprice">₹{{i.mMrp}} </div>
+            <div class="mdprice1">(Inclusive of all taxes)</div>
+            <div class="mdprice1">Get the best price on this product on orders above Rs 499</div>
+            <div class="mdnav1" ><span class="mdnav2">Uses:</span><span class="mdnav3">
+                {{i.mUses}}</span></div>
+            <div class="mdnav1" ><span class="mdnav2">Side Effects:</span><span
+                class="mdnav3"> {{i.mSideEffect}}</span> </div>
+            <div class="mdaddcart"><button class="mdaddcart1">Add To Cart</button></div>
+            <div class="detailsbox">
+                <div class="detailsbox1">
+                    <div class="mdnav11"><span class="mdnav21">Alternate Medicines: </span><br><span class="mdnav3">
+                            {{i.mAlter}}</span></div>
+                    
+                    <div class="mdnav11"><span class="mdnav21">How to Use: </span><br><span class="mdnav3">
+                            {{i.mHowtoUse}}</span></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    {% endfor %}
+
+</body>
+
+</html>

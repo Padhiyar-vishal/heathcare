@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'homepage.css' %}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0399e572c8.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container" id="containerid">
+        <div class="con">
+
+
+            <div class="navigation1"></div>
+            <div class="navigation2">
+                <div class="nvbx1">
+                    <a href="" class="nv">Home</a>
+                    <a href="#nvoffers" class="nv">Offers</a>
+                    <a href="#ContactUs" class="nv">Contact us</a>
+                </div>
+                <div class="nvbx2">
+                    {% if user.is_authenticated %}<a class="nv3"> Hello, {{user.first_name}}</a>&nbsp;<a class="nv2" href="/logout">Logout</a>{% else %}
+                    <a class="nv2" onclick="login()">
+                     Login</a> {% endif %}
+                    <input type="search" class="nvsrc" placeholder="Search">
+                </div>
+            </div>
+
+            <div class="add"><img src="{% static 'banner.jpg' %}" alt="" class="addimg">
+                <img src="{% static 'banner1.jpg' %}" alt="" class="addimg"> {% comment %} <img src="{% static 'banner2.jpg' %}" alt="" class="addimg"> {% endcomment %}
+
+            </div>
+            <div class="mbox">
+                <div class="box">
+                    <a href="medicine">
+                        <div class="box1">
+                            <div class="box11"><img src="{% static 'homed.png' %}" alt="" class="homed"></div>
+                            <div class="imgname1" id="nvoffers">Medicines Delivery</div>
+                        </div>
+                    </a>
+                    <a href="doctor consultation">
+                        <div class="box2">
+                            <div class="box12"><img src="{% static 'doctor.jpg' %}" alt="" class="homed"></div>
+                            <div class="imgname1">Doctor Consultation</div>
+                        </div>
+                    </a>
+                    <div class="box3">
+                        <div class="box13"><img src="{% static 'bedim.png' %}" alt="" class="homed"></div>
+                        <div class="imgname1">Nearby Hospitals</div>
+
+                    </div>
+                </div>
+                {% comment %}
+                <div class="imgname">
+                </div> {% endcomment %}
+
+            </div>
+            <div class="ln"></div>
+
+            <div class="offers">
+                <div class="ofr1">
+                    <div class="hwdct">FLAT 20% OFF</div>
+                    <div class="ofr11"> Order Medicines</div>
+                    <div class="odrnw">
+                        <div class="bnkspc"></div>
+                        <div class="odrnw1">Order Now</div>
+                    </div>
+                </div>
+                <div class="ofr1">
+                    <div class="hwdct">FLAT 25% OFF</div>
+                    <div class="ofr11">HealthCare Products</div>
+                    <div class="odrnw">
+                        <div class="bnkspc"></div>
+                        <div class="odrnw1">Order Now</div>
+                    </div>
+                </div>
+                <div class="ofr1">
+                    <div class="hwdct">FLAT 40% OFF</div>
+                    <div class="ofr11">Online Consultation</div>
+                    <div class="odrnw">
+                        <div class="bnkspc"></div>
+                        <div class="odrnw1">Book Now</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="off">
+                <div class="off11"> FLAT 30% CASHBACK ON YOUR FIRST ORDER </div>
+                <div class="off12">Use Code:FIRST30</div>
+            </div>
+            <div class="ln"></div>
+            <div class="hcprd">Personal Care</div>
+            <div class="products">
+                {% for pCare in personalCare %}
+                <div class="pr">
+                    <a href="product/{{pCare.PcName}}">
+                        <div class="pr1"><img src="/media/{{pCare.PcImage}}" alt="" class="primg"></div>
+                        <div class="pr1name">{{pCare.PcName}}</div>
+                    </a>
+                </div>
+                {% endfor %}
+
+
+            </div>
+            <div class="hcprd">Explore Beauty</div>
+
+            <div class="beautycare">
+                {% for bCare in Beautycare %}
+                <div class="pr">
+                    <a href="product/{{bCare.BcName}}">
+                        <div class="pr1"><img src="/media/{{bCare.BcImage}}" alt="" class="primg"></div>
+                        <div class="pr1name">{{bCare.BcName}}</div>
+                    </a>
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+    <div class="signinup" id="signupid">
+        <div class="signup"><i class="fas fa-arrow-left" onclick="signupin()"></i> &nbsp; Sign Up</div>
+        <div class="signup1">
+            <form method="post" action="/signup" id="submitform">
+                {% csrf_token %}
+
+                <div class="signup111"><input type="text" name="fname" placeholder="First Name" required><input type="text" name="lname" placeholder="Last Name" required></div>
+                <div class="signup11"><input type="email" name="email" placeholder="Email" required></div>
+                <div class="signup11"><input type="password" name="password1" placeholder="Password" required></div>
+                <div class="signup11"><input type="password" name="password2" placeholder="Confirm Password" required></div>
+                <div class="signbtn"><button class="signbtn1" type="submit" form="submitform">Sign Up</button></div>
+                <div class="signin1" onclick="login()">Already have account? Login here</div>
+            </form>
+        </div>
+
+    </div>
+    <div class="loginuser" id="loginuser">
+        <div class="signup" onclick=""><i class="fas fa-arrow-left" onclick="login()"></i> &nbsp; Log In</div>
+        <div class="signup1">
+            <form method="post" action="/login" id="loginid">
+                {% csrf_token %}
+                <div class="signup11"><input type="email" name="uemail" placeholder="Email" required></div>
+                <div class="signup11"><input type="password" name="upassword" placeholder="Password" required></div>
+                <div class="signbtn"><button class="signbtn1" type="submit" form="loginid">Login</button></div>
+                <div class="signin1" onclick="signupin()">Donn't have account? SignUp here</div>
+            </form>
+        </div>
+    </div>
+    <div class="contactus" id="ContactUs">
+        <div class="hcontact">
+            <div class="hcname">
+                Health Care
+            </div>
+            <div class="hcdis">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi molestias, aut consequatur assumenda dicta repellendus consequuntur. Animi voluptate iusto optio possimus, corrupti distinctio fugit hic laudantium.
+            </div>
+            <div class="connumemail"><i class="fas fa-phone-alt"></i>&nbsp; &nbsp;+91 45879 32156</div>
+            <div class="connumemail"><i class="fas fa-envelope"></i>&nbsp; &nbsp;health@care.com</div>
+            <div class="hsocial">
+                <i class="fab fa-facebook socicon"></i>
+                <i class="fab fa-instagram socicon"></i>
+                <i class="fab fa-twitter socicon"></i>
+                <i class="fab fa-linkedin socicon"></i>
+            </div>
+
+        </div>
+        <div class="hcontact">
+            <div class="Qlink">Quick links</div>
+            <ul>
+                <li class="qlink1">Buy Medicines</li>
+                <li class="qlink1">Doctor Consultation</li>
+                <li class="qlink1">Hospiatl near me</li>
+                <li class="qlink1">personal Care</li>
+                <li class="qlink1">Explore Beauty</li>
+            </ul>
+        </div>
+        <div class="hcontact">
+            <div class="conus">Contact Us</div>
+            <div class="conus1">
+                <input type="text" name="" id="" placeholder="Your Name">
+                <input type="email" name="" id="" placeholder="Your Email">
+                <textarea name="" id="" placeholder="Message.."></textarea>
+            </div>
+            <div class="consubmit">
+                <button class="consubmit1">Send</button>
+
+            </div>
+
+        </div>
+        <div class="copyright"><i class="far fa-copyright"></i> 2021 Healthcare IND, Inc. All rights reserved.</div>
+    </div>
+    <script src="{% static 'homepage.js'%}"></script>
+</body>
+
+</html>

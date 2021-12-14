@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+{% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'prd.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet"> 
+
+    <title>Document</title>
+</head>
+
+<body>
+        <div class="navigation1"></div>
+        <div class="navigation2">
+        <div class="nvbx1">
+            <a href="/home" class="nv" >Home</a>
+            <a href="" class="nv">Offers</a>
+            <a href="" class="nv">Contact us</a>
+        </div>
+         <div class="nvbx2">
+                    {% if user.is_authenticated %}<a class="nv3"> Hello, {{user.first_name}}</a>&nbsp;<a class="nv2" href="/logout">Logout</a>{% else %}
+                    <a class="nv2" onclick="login()">
+                     Login</a> {% endif %}
+                    <input type="search" class="nvsrc" placeholder="Search">
+                </div>
+        </div>
+    <div class="container">
+        <div class="box1">
+            <div class="category">Categories</div>
+            <div class="category1">
+                <dl>
+                    <dt>Personal Care</dt>
+                    <a href="/product/Men's Care"><dd class="dd">Men's Care</dd></a>
+                    <a href="/product/Body Care"><dd>Body Care</dd></a>
+                    <a href="/product/Mom & Baby"><dd>Mom & Baby</dd></a>
+                    <a href="/product/Skin Treatment"><dd>Skin Treatment</dd></a>
+                    <a href="/product/Shampoos & Conditioners"><dd>Shampoos & Conditioners</dd></a>
+                </dl>
+                <dl>
+                    <dt>Explore Beauty</dt>
+                    <a href="/product/Facial Kits"><dd class="dd">Facial Kits</dd></a>
+                    <a href="/product/Skin Care"><dd>Skin Care</dd></a>
+                    <a href="/product/Fragrances"><dd>Fragrances</dd></a>
+                    <a href="/product/Lip Care"><dd>Lip Care</dd></a>
+                    <a href="/product/Hair Care"><dd>Hair Care </dd></a>
+                </dl>
+            </div>
+        </div>
+        <div class="box2">
+            <div class="addbanner"><img src="{% static 'bnr1.jpg' %}" alt="" class="addbanner1">
+                <img src="{% static 'bnr2.jpg' %}" alt="" class="addbanner1"></div>
+            <div class="itembox">
+            {% for prd in allpord %}
+                <div class="item1">
+                    <div class="itemimg"><img src="/media/{{prd.APImage}}" alt="" class="itemimg1"></div>
+                    <div class="itemname">{{prd.APName|slice:"0:35"}}...</div>
+                    <div class="marketing">{{prd.APDetails|slice:"0:28"}}...</div>
+                    <div class="itemprice">Best Price: <span class="itemprice1">Rs. {{prd.APPrice}}/-</span> </div>
+                    <div class="itemcart">ADD TO CART</div>
+                </div>
+                {% endfor %}
+               
+            </div>
+
+        </div>
+
+    </div>
+    <script>
+        var myIndex = 0;
+        carousel();
+        
+        function carousel() {
+          var i;
+          var x = document.getElementsByClassName("addbanner1");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+          }
+          myIndex++;
+          if (myIndex > x.length) {myIndex = 1}    
+          x[myIndex-1].style.display = "block";  
+          setTimeout(carousel, 2000); 
+        }
+        </script>
+</body>
+
+</html>

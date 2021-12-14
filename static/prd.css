@@ -1,0 +1,248 @@
+body {
+    margin: 0%;
+    background-color: rgb(236, 241, 255);
+    font-family: 'Rubik', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+ ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.navigation1 {
+    background-color: rgb(225, 225, 255);
+    width: 100%;
+    height: 50px;
+}
+
+.navigation2 {
+    background: linear-gradient(to right bottom, rgb(80, 80, 255), rgb(184, 184, 255));
+    border-radius: 8px;
+    width: 90%;
+    height: 30px;
+    margin: auto;
+    margin-top: -25px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+
+.nv {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+.nv2 {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    padding-left: 5px;
+    margin-right: 10px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.nv3 {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding-left: 5px;
+    margin-right: 7px;
+}
+
+.nv1 {
+    border: 1px solid black;
+    /* margin-left: 50%; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.accircle {
+    color: white;
+    width: 20px;
+    display: inline;
+}
+
+.material-icons.md-48 {
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nv:hover {
+    color: rgb(228, 228, 255);
+}
+
+.nv2:hover {
+    color: rgb(228, 228, 255);
+}
+
+.nvsrc {
+    /* margin-left: 2%;
+    padding: 5px 10px; */
+    outline: none;
+    height: 25px;
+    width: 180px;
+    border: none;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.box1 {
+    background-color: white;
+    border-radius: 5px;
+    width: 25%;
+    height: 410px;
+    position: fixed;
+    top: 120px;
+    left: 10px;
+    box-shadow: 2px 3px 2px rgb(182, 182, 182);
+}
+
+.category {
+    font-weight: bold;
+    font-size: 23px;
+    padding: 5px;
+    border-bottom: 1px solid rgb(143, 143, 143);
+    color: blueviolet;
+    margin: 10px;
+}
+
+dt {
+    margin: 10px;
+    font-size: 18px;
+}
+
+dd {
+    margin-top: 6px;
+    color: rgb(107, 107, 107);
+}
+
+.dd {
+    margin-top: 10px;
+}
+
+.box2 {
+    border-left: 2px solid rgb(122, 122, 122);
+    width: 72%;
+    height: 100%;
+    display: flex;
+    margin-left: 25%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.addbanner {
+    width: 97%;
+    height: 280px;
+    margin: 5px;
+}
+
+.addbanner1 {
+    width: 100%;
+    height: 100%;
+}
+
+.itembox {
+    width: 96%;
+    height: auto;
+    margin: 5px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.item1 {
+    border: 1px solid rgb(212, 212, 212);
+    background-color: white;
+    border-radius: 7px;
+    width: 270px;
+    height: 400px;
+    margin: 5px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.itemimg {
+    width: 100%;
+    height: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.itemimg1 {
+    width: 70%;
+    height: 80%;
+}
+
+.itemname {
+    width: 90%;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.itemprice1 {
+    font-size: 19px;
+    color: rgb(235, 97, 97);
+    font-weight: bold;
+}
+
+.marketing {
+    width: 90%;
+    color: rgb(126, 126, 126);
+}
+
+.itemprice {
+    width: 90%;
+    color: rgb(126, 126, 126);
+}
+
+.itemcart {
+    width: 70%;
+    height: 30px;
+    border-radius: 5px;
+    text-align: center;
+    background: linear-gradient(to right bottom, rgb(80, 80, 255), rgb(160, 160, 255));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+    color: white;
+    font-weight: bold;
+}
+
+.itemcart:hover {
+    cursor: pointer;
+    background: linear-gradient(to right bottom, rgb(47, 47, 255), rgb(100, 100, 252));
+}

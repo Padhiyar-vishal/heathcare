@@ -1,0 +1,273 @@
+body {
+    margin: 0%;
+    background-color: rgb(236, 241, 255);
+    font-family: 'Rubik', sans-serif;
+}
+
+body {
+    background-color: rgb(242, 242, 255);
+}
+
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+ ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.navigation1 {
+    background-color: rgb(225, 225, 255);
+    width: 100%;
+    height: 50px;
+}
+
+.navigation2 {
+    background: linear-gradient(to right bottom, rgb(80, 80, 255), rgb(184, 184, 255));
+    border-radius: 8px;
+    width: 90%;
+    height: 30px;
+    margin: auto;
+    margin-top: -25px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+
+.nv {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+.nv2 {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    padding-left: 5px;
+    margin-right: 10px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.nv3 {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding-left: 5px;
+    margin-right: 7px;
+}
+
+.nv1 {
+    border: 1px solid black;
+    /* margin-left: 50%; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.accircle {
+    color: white;
+    width: 20px;
+    display: inline;
+}
+
+.material-icons.md-48 {
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nv:hover {
+    color: rgb(228, 228, 255);
+}
+
+.nv2:hover {
+    color: rgb(228, 228, 255);
+}
+
+.nvsrc {
+    /* margin-left: 2%;
+    padding: 5px 10px; */
+    outline: none;
+    height: 25px;
+    width: 180px;
+    border: none;
+}
+
+.box {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.box1 {
+    /* border: 1px solid black; */
+    background: rgb(247, 247, 247);
+    border-radius: 8px;
+    width: 45%;
+    height: 280px;
+    margin: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 3px 4px 6px rgb(202, 202, 202);
+}
+
+.box1:hover {
+    box-shadow: 4px 4px 7px rgb(146, 146, 146);
+}
+
+.docimage {
+    width: 320px;
+    height: 320px;
+    /* margin-top: 20px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.docimage1 {
+    border-radius: 50%;
+    height: 210px;
+    width: 210px;
+    box-shadow: 3px 4px 6px rgb(128, 128, 128);
+}
+
+.docimage11 {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.docvrf {
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    bottom: 14%;
+    right: 14%;
+    z-index: 1;
+}
+
+.docvrf1 {
+    height: 100%;
+    width: 100%;
+}
+
+.docdetails {
+    width: 520px;
+    height: 260px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.docname {
+    border-bottom: 1px solid rgb(117, 117, 117);
+    width: 90%;
+    font-size: 24PX;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.rating {
+    width: 17px;
+    height: 17px;
+}
+
+.rating1 {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.docexc {
+    border-bottom: 1px solid rgb(117, 117, 117);
+    margin: 5px;
+    width: 90%;
+    font-size: 16px;
+    color: rgb(113, 113, 255);
+}
+
+.docdtls {
+    width: 90%;
+    height: 38%;
+    margin: 3px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.docdtls1 {
+    width: 48%;
+    height: 40px;
+    display: flex;
+}
+
+.docdtls11 {
+    width: 20%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    color: rgb(113, 113, 255);
+}
+
+.docdtls12 {
+    width: 90%;
+    height: auto;
+    font-size: 11px;
+    color: rgb(107, 107, 107);
+}
+
+.docdtls121 {
+    font-size: 13px;
+    color: rgb(113, 113, 255);
+}
+
+.bookapt {
+    font-size: 18px;
+    width: 90%;
+    height: 30px;
+    margin: 2px 10px;
+    display: flex;
+}
+
+.bookapt1 {
+    background: linear-gradient(to right bottom, rgb(80, 80, 255), rgb(160, 160, 255));
+    border-radius: 7px;
+    padding: 4px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bookapt1:hover {
+    background: linear-gradient(to right bottom, rgb(47, 47, 255), rgb(100, 100, 252));
+}

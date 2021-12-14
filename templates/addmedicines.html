@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {%load static%}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'addmedicines.css' %}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0399e572c8.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="">
+            <div class="addmdname">Add Medicines</div>
+            <div class="hcontact">
+                <div class="conus1">
+                    <table>
+                        <form method="post" enctype="multipart/form-data" id="mdform">
+                            {% csrf_token %}
+                            <tr>
+                                <td> Category: </td>
+                                <td>
+                                    <div class="textarea"><input type="text" name="Cat" id="id_Cat" placeholder="A - Z" required></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td> Medicine Name: </td>
+                                <td>
+                                    <div class="textarea"><input type="text" name="mName" id="id_mName" required></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td> Type of Sell: </td>
+                                <td>
+                                    <div class="textarea"><input type="text" name="mSell" id="id_mSell" required></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td> Mrp: </td>
+                                <td>
+                                    <div class="textarea"><input type="text" name="mMrp" id="id_mMrp" required></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td> Uses: </td>
+                                <td>
+                                    <div class="textarea1"><textarea name="mUses" id="id_mUses" required></textarea></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td> Alternate Medicines: </td>
+                                <td>
+                                    <div class="textarea1"><textarea name="mAlter" id="id_mAlter" required></textarea></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td> Side Effects: </td>
+                                <td>
+                                    <div class="textarea1"><textarea name="mSideEffect" id="id_mSideEffect" required></textarea></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td> How to Use: </td>
+                                <td>
+                                    <div class="textarea1"><textarea name="mHowtoUse" id="id_mHowtoUse" required></textarea></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td> Medicine Count: </td>
+                                <td>
+                                    <div class="textarea"><input type="text" name="mCount" id="id_mCount" required></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td> Medicine Image: </td>
+                                <td> <input type="file" name="mPhoto" id="id_mPhoto" accept="image/*" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="textarea"><input type="text" value="{{user.username}}" name="cName" id="id_cName" style="display:none;"></div>
+                                </td>
+                            </tr>
+
+                        </form>
+                    </table>
+                </div>
+                <div class="consubmit">
+                    <button type="submit" form="mdform" class="consubmit1">Add Medicine</button>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="mddetails">
+            <div class="usernm">Hello, {{user.first_name}} </div>
+            <table class="mdtable">
+                <tr>
+                    <th class="tablehead">Name of Medicines</th>
+                    <th class="tablehead">Available medicines</th>
+                    <th class="tablehead">Remove medicines</th>
+
+
+                </tr>
+
+                {% for md in medicines %}
+                <tr>
+                    <td>{{md.mName}}</td>
+                    <td class="tablecontent">{{md.mCount}}</td>
+                    <td class="tablecontent"><a href="/delete/{{md.id}}"> Remove</a></td>
+
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

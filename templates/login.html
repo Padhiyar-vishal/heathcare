@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .loginuser {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 370px;
+        height: 300px;
+        z-index: 5;
+        background-color: white;
+        border-radius: 7px;
+        box-shadow: 4px 5px 6px rgba(0, 0, 0, 0.63);
+    }
+    
+    .signup {
+        font-size: 26px;
+        font-weight: bold;
+        margin: 20px;
+    }
+    
+    .signup1 {
+        margin: 30px auto 0px auto;
+        width: 320px;
+        /* border: 1px solid black; */
+    }
+    .signup11,
+    .signup111 {
+        width: 300px;
+        height: 32px;
+        margin: 25px auto;
+        /* border: 1px solid black; */
+}
+    
+    .signup11 input {
+        width: 288px;
+        height: 32px;
+        background: rgb(240, 240, 240);
+        border: none;
+        outline: none;
+        border-radius: 3px;
+        font-size: 18px;
+        padding-left: 10px;
+    }
+    
+    .signup11 input::placeholder{
+        font-size: 18px;
+        padding-left: 10px;
+    }
+    
+    .signbtn {
+        width: 300px;
+        margin: auto;
+    }
+    
+    .signbtn1 {
+        border: none;
+        outline: none;
+        font-size: 17px;
+        padding: 7px 15px;
+        border-radius: 5px;
+        background: linear-gradient(to right bottom, rgb(80, 80, 255), rgb(184, 184, 255));
+    }
+    
+    .signin1 {
+        width: 300px;
+        font-size: 14px;
+        margin-top: 20px;
+        text-align: center;
+        color: rgb(70, 70, 70);
+    }
+</style>
+
+<body>
+    <div class="loginuser">
+        <div class="signup"> &nbsp; Log In</div>
+        <div class="signup1">
+            <form method="post" id="loginid">
+                {% csrf_token %}
+                <div class="signup11"><input type="number" name="uanumber" placeholder="Mobile Number" required></div>
+                <div class="signup11"><input type="password" name="uapassword" placeholder="Password" required></div>
+                <div class="signbtn"><button class="signbtn1" type="submit" form="loginid">Login</button></div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

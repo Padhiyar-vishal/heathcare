@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'medicines2.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet"> 
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+            <div class="navigation1"></div>
+            <div class="navigation2">
+            <div class="nvbx1">
+                <a href="home" class="nv" >Home</a>
+                <a href="" class="nv">Offers</a>
+                <a href="" class="nv">Contact us</a>
+            </div>
+            <div class="nvbx2">
+                    {% if user.is_authenticated %}<a class="nv3"> Hello, {{user.first_name}}</a>&nbsp;<a class="nv2" href="/logout">Logout</a>{% else %}
+                    <a class="nv2" onclick="login()">
+                     Login</a> {% endif %}
+                    <input type="search" class="nvsrc" placeholder="Search">
+                </div>
+            </div>
+        <div class="filters">
+            <div class="categories">
+                <div class="cat1">
+                    <div class="cat2">
+                        <img src="{% static 'fever.jpg' %}" alt="" class="cat22">
+                    </div>
+                    <div class="cat3">
+                        Fever
+                    </div>
+                </div>
+                <div class="cat1">
+                    <div class="cat2">
+                        <img src="{% static 'cold.jpg' %}" alt="" class="cat22">
+                    </div>
+                    <div class="cat3">
+                        Colds and Flu
+
+                    </div>
+
+                </div>
+                <div class="cat1">
+                    <div class="cat2">
+                        <img src="{% static 'caugh.jpg' %}" alt="" class="cat22">
+                    </div>
+                    <div class="cat3">
+
+                        Cough
+                    </div>
+                </div>
+                <div class="cat1">
+                    <div class="cat2">
+                        <img src="{% static 'allergies.jpg' %}" alt="" class="cat22">
+                    </div>
+                    <div class="cat3">
+                        Allergies
+
+                    </div>
+                </div>
+
+                <div class="cat1">
+                    <div class="cat2">
+                        <img src="{% static 'Conjunctivitis.jpg' %}" alt="" class="cat22">
+                    </div>
+                    <div class="cat3">
+                        Conjunctivitis
+                    </div>
+                </div>
+                <div class="cat1">
+                    <div class="cat2">
+                        <img src="{% static 'Diarrhea.jpg' %}" alt="" class="cat22">
+                    </div>
+                    <div class="cat3">
+                        Diarrhea
+                    </div>
+                </div>
+                <div class="cat1">
+                    <div class="cat2">
+                        <img src="{% static 'Headaches.jpg' %}" alt="" class="cat22">
+                    </div>
+                    <div class="cat3">
+                        Headaches
+                    </div>
+                </div>
+                <div class="cat1">
+                    <div class="cat2">
+                        <img src="{% static 'Mononucleosis.jpg' %}" alt="" class="cat22">
+                    </div>
+                    <div class="cat3">
+                        Mononucleosis
+                    </div>
+                </div>
+                <div class="cat1">
+                    <div class="cat2">
+                        <img src="{% static 'Stomach Aches.jpg' %}" alt="" class="cat22">
+                    </div>
+                    <div class="cat3">
+                        Stomach Aches
+                    </div>
+                </div>
+            </div>
+            <div class="atoz">
+                <a href="#A">
+                    <div class="atoz1" id="atozid1"> A - B </div>
+                </a>
+                <a href="#C">
+                    <div class="atoz1" id="atozid2"> C - D </div>
+                </a>
+                <a href="#E">
+                    <div class="atoz1" id="atozid3"> E - F </div>
+                </a>
+                <a href="#H">
+                    <div class="atoz1" id="atozid4"> G - H </div>
+                </a>
+                <a href="#I">
+                    <div class="atoz1" id="atozid5"> I - J </div>
+                </a>
+                <a href="#K">
+                    <div class="atoz1" id="atozid6"> K - L </div>
+                </a>
+                <a href="#N">
+                    <div class="atoz1" id="atozid7"> M - N </div>
+                </a>
+                <a href="#O">
+                    <div class="atoz1" id="atozid8"> O - P </div>
+                </a>
+                <a href="#Q">
+                    <div class="atoz1" id="atozid9"> Q - R </div>
+                </a>
+                <a href="#S">
+                    <div class="atoz1" id="atozid10"> S - T</div>
+                </a>
+                <a href="#U">
+                    <div class="atoz1" id="atozid11"> U - V</div>
+                </a>
+                <a href="#X">
+                    <div class="atoz1" id="atozid12"> W - X</div>
+                </a>
+                <a href="#Z">
+                    <div class="atoz1" id="atozid13"> Y - Z</div>
+                </a>
+            </div>
+        </div>
+        <div class="medicines" id="medicinesid">
+            {% for i in medicine %}
+            
+            <div class="medicines1" id="{{i.Cat}}">
+                <div class="medicinepic"><img src="/media/{{i.mPhoto}}" alt="" class="medicinepic1"></div>
+
+                <div class="medicinedtls">
+                    <div class="medicinename">
+                        <a href="{{i.id}}">{{i.mName}}</a>
+                    </div>
+
+                    <div class="medicinesdes1">{{i.mSell}}
+                    </div>
+
+                    <div class="medicinesdes2">
+                        <span class="uses">Uses: </span> <br> {{i.mUses}}
+                    </div>
+                    <div class="medicineprs">₹{{i.mMrp}}  </div>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+    {% comment %}
+    <script src="{% static 'medicines1.js' %}"></script> {% endcomment %}
+
+</body>
+
+</html>

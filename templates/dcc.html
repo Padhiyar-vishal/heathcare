@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'dcc.css' %}" />
+    <script src="https://kit.fontawesome.com/0399e572c8.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet" />
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="navigation1"></div>
+    <div class="navigation2">
+        <div class="nvbx1">
+            <a href="home" class="nv">Home</a>
+            <a href="" class="nv">Offers</a>
+            <a href="" class="nv">Contact us</a>
+        </div>
+        <div class="nvbx2">
+                    {% if user.is_authenticated %}<a class="nv3"> Hello, {{user.first_name}}</a>&nbsp;<a class="nv2" href="/logout">Logout</a>{% else %}
+                    <a class="nv2" onclick="login()">
+                     Login</a> {% endif %}
+                    <input type="search" class="nvsrc" placeholder="Search">
+                </div>
+    </div>
+    <div class="container">
+        <div class="box01">
+            <div class="box1">
+                <div class="docimage">
+                    <div class="docimage1">
+                        <img src="{% static 'dc1.jpg' %}" alt="" class="docimage11" />
+                    </div>
+                    <div class="docvrf">
+                        <img src="{% static 'verify.png' %}" alt="" class="docvrf1" />
+                    </div>
+                </div>
+                <div class="docdetails">
+                    <div class="docname">
+                        DR. Octivius &nbsp;
+                        <img src="{% static 'star.png' %}" alt="" class="rating" /><span class="rating1">4.5/5</span>
+                    </div>
+                    <div class="docexc">FAMILY PHYSICIAN | 1 YEARS Experience</div>
+                    <div class="docdtls">
+                        <div class="docdtls1">
+                            <div class="docdtls11">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div class="docdtls12">
+                                <span class="docdtls121"> Education </span><br />
+                                MBBS (General Practitioner)
+                            </div>
+                        </div>
+                        <div class="docdtls1">
+                            <div class="docdtls11">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="docdtls12">
+                                <span class="docdtls121"> Location </span><br />
+                                Doctors,Hyderabad
+                            </div>
+                        </div>
+                        <div class="docdtls1">
+                            <div class="docdtls11"><i class="fas fa-user-md"></i></div>
+                            <div class="docdtls12">
+                                <span class="docdtls121"> Registration Number </span><br />
+                                1DSE4G
+                            </div>
+                        </div>
+                        <div class="docdtls1">
+                            <div class="docdtls11"><i class="fas fa-globe"></i></div>
+                            <div class="docdtls12">
+                                <span class="docdtls121"> Languages </span><br />
+                                Hindi, Telugu, English
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bookapt">
+                        <div class="bookapt1">BOOK APPOINTMENT</div>
+                    </div>
+                </div>
+            </div>
+            <div class="aboutdoc">About DR. Octivius</div>
+            <div class="aboutdoc1">
+                DR. Octivius is a top Apollo expert consulting patients all over the
+                country. Dr. Patolla is well-known to help patients through various
+                ailments and manage acute medical conditions and efficiently treat
+                fever, migraines, ulcers, common health issues like cold and cough,
+                chronic pain as well as typhoid. She is also popular among her
+                patients for her helpful counselling in issues pertaining to
+                arthritis, joint and muscle issues, anaemia and gives help in
+                lifestyle and stress management counselling. She specialises in
+                treating covid related cases, especially covid pneumonia, gastro
+                related issues and anaemia. Dr. Patolla is one of the top consultants
+                for any queries related to vaccinations and immunizations.
+            </div>
+            <div class="docservices">Services</div>
+            <div class="docservices1">
+                - Health Checkup (General) <br />
+                - Fever, Cold & Cough Treatment <br />
+                - Covid-19 management & counselling <br />
+                - Stress Management Counselling <br />
+                - Headaches of all types, Migraines <br />
+                - Healthy lifestyle counselling <br />
+                - Arthritis Management, Joint and Muscle Problems <br />
+                - Anemia Treatment
+            </div>
+
+            <div class="doctiming">Timings</div>
+            <div class="doctiming1">
+                <table class="doctiming2">
+                    <tr>
+                        <td rowspan="2">Monday</td>
+                        <td>08:00 AM - 01:00P PM</td>
+                    </tr>
+                    <tr>
+                        <td>02:00 AM - 04:00P PM</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Tuesday</td>
+                        <td>08:00 AM - 01:00P PM</td>
+                    </tr>
+                    <tr>
+                        <td>02:00 AM - 04:00P PM</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Wednesday</td>
+                        <td>08:00 AM - 01:00P PM</td>
+                    </tr>
+                    <tr>
+                        <td>02:00 AM - 04:00P PM</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Thursday</td>
+                        <td>08:00 AM - 01:00P PM</td>
+                    </tr>
+                    <tr>
+                        <td>02:00 AM - 04:00P PM</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Friday</td>
+                        <td>08:00 AM - 01:00P PM</td>
+                    </tr>
+                    <tr>
+                        <td>02:00 AM - 04:00P PM</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Saturday</td>
+                        <td>08:00 AM - 01:00P PM</td>
+                    </tr>
+                    <tr>
+                        <td>02:00 AM - 04:00P PM</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Sunday</td>
+                        <td>08:00 AM - 01:00P PM</td>
+                    </tr>
+                    <tr>
+                        <td>02:00 AM - 03:00P PM</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="box02">
+            <div class="conoption">
+                <div class="conoption1">Online</div>
+                <div class="conoption1">On Clinic</div>
+                <div class="conoption1">Chat</div>
+            </div>
+            <div class="datepicker">
+                Date: &nbsp;<input type="date" name="" id="" class="datepicker1" />
+            </div>
+            <div class="timepicker">
+                <label for="time" class="timepicker1">Time:&nbsp;</label>
+                <select name="" id="time" class="timepicker2">
+                    <option value="08:00 AM - 09:00 AM">08:00 AM - 09:00 AM</option>
+                    <option value="09:00 AM - 10:00 AM">09:00 AM - 10:00 AM</option>
+                    <option value="10:00 AM - 11:00 AM">10:00 AM - 11:00 AM</option>
+                    <option value="11:00 AM - 12:00 PM">11:00 AM - 12:00 PM</option>
+                    <option value="12:00 PM - 01:00 PM">12:00 PM - 01:00 PM</option>
+                    <option value="02:00 PM - 03:00 PM">02:00 PM - 03:00 PM</option>
+                    <option value="03:00 PM - 04:00 PM">03:00 PM - 04:00 PM</option>
+                </select>
+            </div>
+            <div class="ckeckavb"><button class="ckeckavb1">Check Availability</button> </div>
+            <div class="wrtmessage"><div class="chatbox">Message: </div> <div class="chatbox1"></div></div>
+            <div class="bookappt"><button class="bookappt1"> BOOK APPOINTMENT</button></div>
+        </div>
+    </div>
+</body>
+
+</html>

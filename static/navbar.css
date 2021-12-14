@@ -1,0 +1,75 @@
+.navigation1 {
+    background-color: rgb(225, 225, 255);
+    width: 100%;
+    height: 50px;
+}
+
+.navigation2 {
+    background: linear-gradient(to right bottom, rgb(80, 80, 255), rgb(184, 184, 255));
+    border-radius: 8px;
+    width: 90%;
+    height: 30px;
+    margin: auto;
+    margin-top: -25px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+
+.nv {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+.nv2 {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    padding-left: 5px;
+    margin-right: 10px;
+}
+
+.nv3 {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding-left: 5px;
+    margin-right: 7px;
+}
+
+.nv1 {
+    border: 1px solid black;
+}
+
+.accircle {
+    color: white;
+    width: 20px;
+    display: inline;
+}
+
+.material-icons.md-48 {
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nv:hover {
+    color: rgb(0, 0, 255);
+}
+
+.nv2:hover {
+    color: rgb(0, 0, 255);
+}
+
+.nvsrc {
+    /* margin-left: 2%;
+    padding: 5px 10px; */
+    outline: none;
+}

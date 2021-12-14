@@ -1,0 +1,603 @@
+body {
+    margin: 0%;
+    background-color: rgb(236, 241, 255);
+    font-family: 'Rubik', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+ ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.navigation1 {
+    background-color: rgb(225, 225, 255);
+    width: 100%;
+    height: 50px;
+}
+
+.navigation2 {
+    background: linear-gradient(to right bottom, rgb(80, 80, 255), rgb(184, 184, 255));
+    border-radius: 8px;
+    width: 90%;
+    height: 30px;
+    margin: auto;
+    margin-top: -25px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+.nv {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+.nv2 {
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    padding-left: 5px;
+    margin-right: 10px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.nv3 {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding-left: 5px;
+    margin-right: 7px;
+}
+
+.nv1 {
+    border: 1px solid black;
+    /* margin-left: 50%; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.accircle {
+    color: white;
+    width: 20px;
+    display: inline;
+}
+
+.material-icons.md-48 {
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nv:hover {
+    color: rgb(228, 228, 255);
+}
+
+.nv2:hover {
+    color: rgb(228, 228, 255);
+    cursor: pointer;
+}
+
+.nvsrc {
+    outline: none;
+    height: 25px;
+    width: 180px;
+    border: none;
+}
+
+.add {
+    width: 100%;
+    height: 420px;
+    margin-top: 0px;
+}
+
+.addimg {
+    width: 100%;
+    height: 100%;
+}
+
+.box {
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    margin-top: 30px;
+}
+
+.box1 {
+    /* border: 1px solid black; */
+    width: 280px;
+    height: 280px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.homed {
+    width: 100%;
+    height: 100%;
+    border-radius: 26px;
+    background-color: white;
+}
+
+.box2 {
+    /* border: 1px solid black; */
+    width: 280px;
+    height: 280px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.box3 {
+    /* border: 1px solid black; */
+    width: 280px;
+    height: 280px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.box11 {
+    border: 1px solid rgb(216, 216, 216);
+    width: 260px;
+    height: 260px;
+    border-radius: 25px;
+    transition-property: all;
+    transition-duration: 2s;
+}
+
+.box12 {
+    border: 1px solid rgb(216, 216, 216);
+    width: 260px;
+    height: 260px;
+    border-radius: 25px;
+    transition-property: all;
+    transition-duration: 2s;
+    background-color: white;
+}
+
+.box13 {
+    border: 1px solid rgb(216, 216, 216);
+    width: 260px;
+    height: 260px;
+    border-radius: 25px;
+    transition-property: all;
+    transition-duration: 2s;
+}
+
+.box11:hover {
+    width: 280px;
+    height: 280px;
+}
+
+.box12:hover {
+    width: 280px;
+    height: 280px;
+}
+
+.box13:hover {
+    width: 280px;
+    height: 280px;
+}
+
+.imgname {
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.imgname1 {
+    /* border: 1px solid black; */
+    width: 260px;
+    height: 45px;
+    font-size: 25px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    font-weight: bold;
+}
+
+.ln {
+    border: 1px solid black;
+    width: 95%;
+    margin: auto;
+    margin-top: 60px;
+}
+
+.offers {
+    /* border: 1px solid black; */
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.ofr1 {
+    /* border: 1px solid rgb(189, 189, 189); */
+    background: linear-gradient(to right bottom, rgb(80, 80, 255), rgb(184, 184, 255));
+    border-radius: 10px;
+    width: 370px;
+    height: 150px;
+}
+
+.ofr1:hover {
+    /* border: 1px solid rgb(170, 170, 170); */
+    box-shadow: 4px 5px 6px 0 rgba(0, 0, 0, 0.2), 4px 6px 6px 0 rgba(0, 0, 0, 0.19);
+}
+
+.hwdct {
+    /* border: 1px solid black; */
+    background-color: rgb(255, 80, 80);
+    color: white;
+    font-weight: bolder;
+    border-radius: 9px 0px 0px 0px;
+    width: 33%;
+    height: 15px;
+    padding: 5px;
+    font-size: 15px;
+}
+
+.ofr11 {
+    /* border: 1px solid black; */
+    width: 90%;
+    height: 30px;
+    font-size: 28px;
+    font-weight: bolder;
+    color: white;
+    margin-top: 22px;
+    margin-left: 10px;
+}
+
+.bnkspc {
+    height: 10px;
+}
+
+.odrnw {
+    background-color: rgb(255, 255, 255);
+    border-radius: 0px 0px 10px 10px;
+    width: 100%;
+    height: 50px;
+    margin-top: 23px;
+    padding: 0px;
+}
+
+.odrnw1 {
+    background-color: rgb(102, 102, 255);
+    /* display: inline; */
+    border-radius: 20px;
+    height: 27px;
+    width: 100px;
+    margin-left: 10px;
+    font-size: 18px;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    cursor: pointer;
+}
+
+.odrnw1:hover {
+    background-color: rgb(45, 45, 255);
+}
+
+.off {
+    border: 2px dashed rgb(97, 97, 255);
+    width: 95%;
+    height: 100px;
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.off11 {
+    font-size: 40px;
+    font-weight: bolder;
+    color: rgb(80, 80, 255);
+}
+
+.off12 {
+    border: 2px dashed rgb(80, 80, 255);
+    font-size: 20px;
+    display: inline;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.hcprd {
+    margin-top: 30px;
+    font-size: 25px;
+    margin-left: 10px;
+    font-weight: bolder;
+}
+
+.products {
+    /* border: 1px solid black; */
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.pr {
+    width: 255px;
+    height: 330px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: white;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.pr:hover {
+    box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.63);
+}
+
+.pr1 {
+    width: 100%;
+    height: 250px;
+    margin-top: 25px;
+}
+
+.primg {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.pr1name {
+    text-align: center;
+    font-size: 20px;
+}
+
+.beautycare {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: 200px;
+    background: linear-gradient(to right bottom, rgb(113, 113, 255), rgb(208, 208, 255));
+    margin-top: 10px;
+}
+
+.signinup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 370px;
+    height: 400px;
+    z-index: 5;
+    background-color: white;
+    border-radius: 7px;
+    box-shadow: 4px 5px 6px rgba(0, 0, 0, 0.63);
+    display: none;
+}
+
+.loginuser {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 370px;
+    height: 300px;
+    z-index: 5;
+    background-color: white;
+    border-radius: 7px;
+    box-shadow: 4px 5px 6px rgba(0, 0, 0, 0.63);
+    display: none;
+}
+
+.signup {
+    font-size: 26px;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.signup1 {
+    margin: 30px auto 0px auto;
+    width: 320px;
+    /* border: 1px solid black; */
+}
+
+.signup11,
+.signup111 {
+    width: 300px;
+    height: 32px;
+    margin: 25px auto;
+    /* border: 1px solid black; */
+}
+
+.signup111 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.signup11 input {
+    width: 288px;
+    height: 32px;
+    background: rgb(240, 240, 240);
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    font-size: 18px;
+    padding-left: 10px;
+}
+
+.signup111 input {
+    width: 132px;
+    height: 32px;
+    background: rgb(235, 235, 235);
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    font-size: 18px;
+    padding-left: 10px;
+}
+
+.signup11 input::placeholder,
+.signup111 input::placeholder {
+    font-size: 18px;
+    padding-left: 10px;
+}
+
+.signbtn {
+    width: 300px;
+    margin: auto;
+}
+
+.signbtn1 {
+    border: none;
+    outline: none;
+    font-size: 17px;
+    padding: 7px 15px;
+    border-radius: 5px;
+    background: linear-gradient(to right bottom, rgb(80, 80, 255), rgb(184, 184, 255));
+}
+
+.signin1 {
+    width: 300px;
+    font-size: 14px;
+    margin-top: 20px;
+    text-align: center;
+    color: rgb(70, 70, 70);
+}
+
+.contactus {
+    margin-top: 180px;
+    background: linear-gradient(to right bottom, rgb(118, 118, 255), rgb(184, 184, 255));
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.hcontact {
+    width: 400px;
+    height: 250px;
+    margin-top: 25px;
+    color: white;
+}
+
+.hcname {
+    font-size: 23px;
+    font-weight: bold;
+    margin: 10px 5px;
+}
+
+.hcdis {
+    font-size: 15px;
+    text-align: justify;
+    text-justify: inter-word;
+    margin: 5px 5px 20px 5px;
+}
+
+.connumemail {
+    margin: 5px;
+}
+
+.socicon {
+    margin: 20px 10px;
+    font-size: 20px;
+}
+
+.Qlink {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.qlink1 {
+    margin-top: 4px;
+}
+
+.conus {
+    font-size: 23px;
+    font-weight: bold;
+    margin: 10px 10px 5px 7px;
+}
+
+.conus1 input,
+.conus1 textarea {
+    width: 280px;
+    height: 25px;
+    margin: 7px;
+    border: none;
+    outline: none;
+    background-color: rgb(235, 235, 255);
+    border-radius: 5px;
+}
+
+.conus1 textarea {
+    height: 55px;
+}
+
+.consubmit {
+    width: 282px;
+    margin: 7px;
+    text-align: end;
+}
+
+.consubmit1 {
+    padding: 4px 7px;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: rgb(79, 66, 255);
+    color: white;
+}
+
+.copyright {
+    font-size: 15px;
+    color: white;
+}

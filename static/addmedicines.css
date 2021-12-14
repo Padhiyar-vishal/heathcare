@@ -1,0 +1,122 @@
+body {
+    margin: 0%;
+    background-color: rgb(236, 241, 255);
+    font-family: 'Rubik', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+ ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.addmdname {
+    font-size: 25px;
+    margin: 10px;
+    height: 50px;
+    width: 620px;
+    text-align: center;
+}
+
+.conus1 {
+    border-right: 2px solid rgb(66, 66, 66);
+    width: 620px;
+}
+
+.conus1 input,
+.conus1 textarea {
+    width: 280px;
+    height: 25px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.conus1 textarea {
+    height: 55px;
+}
+
+.consubmit {
+    width: 620px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.consubmit1 {
+    padding: 6px 12px;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: rgb(79, 66, 255);
+    color: white;
+}
+
+.textarea input {
+    width: 400px;
+    height: 40px;
+}
+
+.textarea ::placeholder {
+    color: rgb(168, 168, 168);
+    padding-left: 10px;
+}
+
+.textarea1 textarea {
+    width: 400px;
+    height: 65px;
+}
+
+td {
+    padding: 5px;
+}
+
+.usernm {
+    font-size: 22px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.mddetails {
+    width: 660px;
+    height: 100%;
+}
+
+.mdtable {
+    margin-top: 35px;
+}
+
+.tablehead {
+    padding: 8px;
+    border-bottom: 2px solid rgb(75, 75, 75);
+}
+
+.tablecontent {
+    text-align: center;
+}
+
+th {
+    text-align: left;
+    font-size: 20px;
+}
